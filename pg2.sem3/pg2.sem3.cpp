@@ -8,14 +8,6 @@ struct object {
     float a, b, c;
     double volume, perimeter;
 };
-
-/*char* Read_String() {
-    fflush(stdin);
-    char* str = (char*)malloc(100);
-    gets_s(str,10);
-    return str;
-
-}*/
 void Read(struct object *x) {
     int deliv;
     printf("Введите параметры объекта:\nДлина = ");
@@ -90,10 +82,8 @@ int main()
     struct object* obj2 = new object;
     obj1->a = 0;
     obj2->a = 0;
-    printf("%f", obj1->a);
     Read(obj1);
     Init(14,17,22,true,obj2);
-    //obj1->name = Read_String();
     Display(obj1);
     Display(obj2);
     calcvolume(obj1);
@@ -104,6 +94,4 @@ int main()
     DisplayFinal(obj1);
     DisplayFinal(obj2);
     return 0;
-
-    
 }
